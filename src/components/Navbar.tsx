@@ -12,13 +12,28 @@ const NAV_ITEMS = [
 ];
 
 export const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const location = useLocation();
-  
+
+  const toggleMenu = () => setIsOpen((open) => !open);
+  const closeMenu = () => setIsOpen(false);
+
+  React.useEffect(() => {
+    closeMenu();
+  }, [location.pathname]);
+
   return (
-    <header className="navbar">
+    <header className="navbar" style={{ zIndex: 1000 }}>
       <div className="navbar-inner">
         <div className="navbar-left">
-          <Link to="/" className="brand-link">
+          <Link
+            to="/"
+            className="brand-link"
+            onClick={() => {
+              closeMenu();
+              window.scrollTo(0, 0);
+            }}
+          >
             <img
               src={logo}
               alt="Samadhai Technologies logo"
@@ -27,28 +42,64 @@ export const Navbar: React.FC = () => {
             <span className="brand-name">Samadhai Technologies</span>
           </Link>
         </div>
+
         <nav className="navbar-center" aria-label="Primary">
-          <ul className="nav-list">
+          <ul
+            id="primary-navigation"
+            className={`nav-list ${isOpen ? "open" : ""}`}
+          >
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
-                <Link 
-                  to={item.id} 
-                  className={`nav-link ${location.pathname === item.id ? 'active' : ''}`}
+                <Link
+                  to={item.id}
+                  className={`nav-link ${location.pathname === item.id ? "active" : ""}`}
+                  onClick={() => {
+                    closeMenu();
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   {item.label}
                 </Link>
               </li>
             ))}
+
+            <li className="mobile-only-contact">
+              <Link
+                to="/contact"
+                className="button-primary mobile-menu-cta"
+                onClick={() => {
+                  closeMenu();
+                  window.scrollTo(0, 0);
+                }}
+              >
+                Contact Now <span className="button-arrow">&rarr;</span>
+              </Link>
+            </li>
           </ul>
         </nav>
+
         <div className="navbar-right">
-          <Link to="/contact" className="button-primary">
-            Contact Us <span className="button-arrow">→</span>
+          <Link
+            to="/contact"
+            className="button-primary"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Contact Now <span className="button-arrow">&rarr;</span>
           </Link>
         </div>
+
+        <button
+          className={`mobile-menu-toggle ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
   );
 };
-
-
