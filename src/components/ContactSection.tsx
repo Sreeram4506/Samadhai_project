@@ -68,34 +68,40 @@ export const ContactSection: React.FC = () => {
       <div className="contact-grid">
         <ScrollReveal className="contact-info" animation="reveal-right">
           <h3>Get in Touch</h3>
-          <div className="contact-methods">
-            <div className="contact-method">
-              <div className="contact-icon">📧</div>
-              <div className="contact-details">
-                <h4>Email</h4>
-                <p>info@samadhaitechnologies.com</p>
-                <p>For general inquiries and partnership opportunities</p>
+            <div className="contact-methods">
+              <div className="contact-method">
+                <div className="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div className="contact-details">
+                  <h4>Email</h4>
+                  <p>info@samadhaitechnologies.com</p>
+                  <p>For general inquiries and partnership opportunities</p>
+                </div>
               </div>
-            </div>
 
-            <div className="contact-method">
-              <div className="contact-icon">📱</div>
-              <div className="contact-details">
-                <h4>Phone</h4>
-                <p>+91 9573264575</p>
-                <p>Monday - Friday, 9:00 AM - 6:00 PM IST</p>
+              <div className="contact-method">
+                <div className="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                </div>
+                <div className="contact-details">
+                  <h4>Phone</h4>
+                  <p>+91 9573264575</p>
+                  <p>Monday - Friday, 9:00 AM - 6:00 PM IST</p>
+                </div>
               </div>
-            </div>
 
-            <div className="contact-method">
-              <div className="contact-icon">📍</div>
-              <div className="contact-details">
-                <h4>Office</h4>
-                <p>Samadhai Technologies Private Limited</p>
-                <p>LIG 237, Road No 2, near Dhana Lakshmi Center Phase 1, kPHB Colony Hyderabad, Telangana 500072</p>
+              <div className="contact-method">
+                <div className="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div className="contact-details">
+                  <h4>Office</h4>
+                  <p>Samadhai Technologies Private Limited</p>
+                  <p>LIG 237, Road No 2, near Dhana Lakshmi Center Phase 1, kPHB Colony Hyderabad, Telangana 500072</p>
+                </div>
               </div>
             </div>
-          </div>
         </ScrollReveal>
 
         <ScrollReveal className="contact-form" animation="reveal-left">
