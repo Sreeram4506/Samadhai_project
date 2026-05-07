@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
 
         <ScrollReveal animation="reveal-up" delay="delay-100">
           <h1 className="hero-title">
-            Engineering calm into
+            Engineering calm into <br />
             <span>complex systems.</span>
           </h1>
         </ScrollReveal>
@@ -26,16 +26,12 @@ export const Hero: React.FC = () => {
         <ScrollReveal animation="reveal-up" delay="delay-300">
           <p className="hero-subcopy">
             A small team, based in Telangana, with a focus on durability,
-            clarity, and long-term technology partnerships.
+            clarity, and long–term technology partnerships.
           </p>
         </ScrollReveal>
       </div>
 
-      <ScrollReveal
-        animation="reveal-zoom"
-        delay="delay-400"
-        className="hero-visual-wrapper"
-      >
+      <ScrollReveal animation="reveal-zoom" delay="delay-400" className="hero-visual-wrapper">
         <div className="animated-computer">
           <div className="computer-screen">
             <div className="screen-glow"></div>
@@ -73,3 +69,5 @@ export const Hero: React.FC = () => {
     </div>
   );
 };
+
+

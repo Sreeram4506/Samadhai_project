@@ -32,7 +32,7 @@ export const LeadershipSection: React.FC = () => {
         <ScrollReveal className="person-card" animation="reveal-right" delay="delay-100">
           <div className="person-avatar">👨‍💼</div>
           <h3 className="person-name">Pavan Kumar Pasupuleti</h3>
-          <p className="person-role">CEO & Founder</p>
+          <p className="person-role">CEO and Founder</p>
           <p className="person-copy">
             Provides overall product and technology direction for Samadhai,
             ensuring that every engagement ties back to clear outcomes for
@@ -51,7 +51,7 @@ export const LeadershipSection: React.FC = () => {
           <div className="person-background">
             <h4>Background</h4>
             <p>
-              With over years of experience in technology leadership, Pavan has
+              With over 15 years of experience in technology leadership, Pavan has
               led numerous digital transformation initiatives across various industries.
               His expertise spans from early-stage startups to enterprise-scale implementations,
               with a particular focus on leveraging AI to solve complex business challenges.

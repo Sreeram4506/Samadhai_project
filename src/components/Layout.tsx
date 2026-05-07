@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./Navbar";
-import { ScrollToTop } from "./ScrollToTop";
 import { HomePage } from "../pages/HomePage";
 import { ServicesPage } from "../pages/ServicesPage";
 import { AboutPage } from "../pages/AboutPage";
@@ -14,19 +13,16 @@ import { Footer } from "./Footer";
 export const Layout: React.FC = () => {
   return (
     <Router>
-      <ScrollToTop />
       <div className="page-root">
         <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/leadership" element={<LeadershipPage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/leadership" element={<LeadershipPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
         <Footer />
       </div>
     </Router>
